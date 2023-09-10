@@ -1,17 +1,13 @@
 import React from 'react';
-import Logo from '../Logo/Logo';
+import Navigation from '../Navigation';
 
-const styles = {
-  header: {
-    minHeight: 80,
-    backgroundColor: 'palevioletred',
-  },
+
+const AppBar = () => {
+  return (
+   <header>
+    <Navigation />
+   </header>
+  );
 };
-
-const AppBar = () => (
-  <header style={styles.header}>
-    <Logo text="ЛОГО" />
-  </header>
-);
 
 export default AppBar;

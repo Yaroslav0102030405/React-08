@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Axios from 'axios';
+import BookList from '../components/BookList/BookList';
 
 class BooksPage extends Component {
   state = {
@@ -18,16 +18,9 @@ class BooksPage extends Component {
     return (
       <>
         <h1>Страница книг</h1>
+        <BookList books={this.state.books} />
 
-        <ul>
-          {this.state.books.map(book => (
-            <li key={book.id}>
-              <Link to={`${this.props.match.url}/${book.id}`}>
-                {book.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      
       </>
     );
   }
